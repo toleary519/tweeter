@@ -21,9 +21,11 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -52,11 +54,11 @@
         <form action="/tweets" method="POST">
           <div class="text-field">
             <!-- <label for="tweet-text">What are you humming about?</label> -->
-            <textarea class="tweet-text" id="tweet-text" rows="1" placeholder="Hello world."></textarea>
+            <textarea class="tweet-text" name="text" id="tweet-text" rows="1" placeholder="Hello world."></textarea>
          </div>
           <div class="footer">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" id="counter" class="counter">140</output>
           </div>
         </form>
       </section>
