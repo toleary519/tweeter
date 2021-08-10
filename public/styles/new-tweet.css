@@ -1,0 +1,51 @@
+/* .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5%;
+  padding-left: 5%;
+  background-color: #f5f574;
+  font-family: "Source Sans Pro";
+  font-size: 25px;
+} */
+
+p {
+  font-size: 5;
+  padding-bottom: 10;
+}
+
+.new-tweet {
+  width: 100%;
+  align-items: center;
+}
+
+.text-field {
+  width: 100%;
+}
+
+.tweet-text {
+  display: flex;
+  width: 100%;
+  align-content: flex-end;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: #f5f574;
+}
+
+.footer {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  align-items: flex-start;
+  font-family: "Bungee";
+  color: white;
+  background-color: #4056A1;
+}
+
+.counter {
+  font-family: "Bungee";
+}
+

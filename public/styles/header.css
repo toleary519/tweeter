@@ -20,5 +20,5 @@ header {
 
 /* why is this not working  */
 .backer { 
-  background-image: url("dark-tire.png");
+  background-image: url("/public/images/dark-tire.png");
 }
