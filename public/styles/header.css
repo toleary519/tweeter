@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:400px;
+  width: 100%;
+  background-color: #f5f574;
+  background-image: url ("/images/dark-tire.png");
+  font-family: 'Source Sans Pro';
+  font-size: 34px;
+}
+
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content img {
+  
+
+}
+.header-content p {
+
+}
+
+.backer { 
+  background-image: url("dark-tire.png");
+}
