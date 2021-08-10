@@ -18,14 +18,7 @@ header {
   justify-content: center;
 }
 
-.header-content img {
-  
-
-}
-.header-content p {
-
-}
-
+/* why is this not working  */
 .backer { 
   background-image: url("dark-tire.png");
 }
