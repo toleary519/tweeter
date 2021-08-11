@@ -8,9 +8,11 @@ nav {
   font-size: 24px;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  z-index: -1;
-  /* margin-bottom: 0.75em; */
-  
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 120px;
 }
 
 span {
@@ -36,37 +38,3 @@ span {
   font-size: 25px;
   color: red
 }
-/* 
-nav {
-  display: flex;
-  height:120px;
-  background-color: #4056A1;
-  font-family: 'Source Sans Pro';
-  font-size: 24px;
-}
-
-span {
-  justify-content: flex-start;
-  align-self: flex-end;
-
-  color: white;
-  font-family: "Bungee";
-  font-size: 40px;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  margin-bottom:20px;
-}
-
-p1 {
-  color: white;
-  justify-content: flex-end;
-  margin-right: 1.5em;
-  font-size: 25px;
-  font-weight: bold;
-}
-p2 {
-  color: white;
-  justify-content: flex-end;
-  margin-right: 1.5em;
-  font-size: 25px;
-} */ 
