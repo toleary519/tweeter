@@ -9,7 +9,7 @@ $(document).ready(function() {
     if (remainingChar < 0) { 
       $("#counter").css({'color': 'red'});
     } else {
-      $("#counter").css({'color': "545149"});
+      $("#counter").css({'color': "#545149"});
     }
     
   });
