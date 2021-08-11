@@ -9,6 +9,12 @@ article {
 .tweet-container {
   border: 2px solid #545149;
 }
+
+.tweet-container:hover {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+}
+
 .avatar-name {
   display: flex;
   flex-direction: row; 
@@ -51,6 +57,10 @@ article {
 
 .icons-date i {
   padding: 7px;
+}
+
+.icons-date i:hover {
+  color: rgb(245, 86, 28)
 }
 
 .date {
