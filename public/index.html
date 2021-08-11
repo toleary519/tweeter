@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
@@ -61,31 +62,29 @@
             <output name="counter" id="counter" class="counter">140</output>
           </div>
         </form>
-        <aside id="tweet-container"> 
-          <section>
-            <div class="avatarName"> 
-              <img>
-              <p>Thomas O'Leary</p>
-            </div>
-            <div class="handle">
-              <p>@toleary</p>
-            </div>
-            <div class="stored-tweet">
-              <p>Hello World, From The Past!</p>
-            </div>
-            <div class="date">
-              <date>
-
-              </date>
-            </div>
+    
+        <article class="tweet-container">
+          <div class="avatar-name"> 
+            <i class="fas fa-solid fa-user-astronaut"></i>
+            <p>Thomas O'Leary</p>  
+            <p class="handle">@toleary</p>
+          </div>
+          <div class="stored-tweet">
+            <p>Hello World, From The Past!</p>
+          </div>
+          <div class="date">
+            <date>
+          
+            </date>
+          </div>
             <div class="icons-right">
-
-            </div>
-            </section>
-          </section>
-        </aside>  
+            <i class="fas fa-solid fa-flag"></i>
+            <i class="fas fa-solid fa-retweet"></i>
+            <i class="fas fa-solid fa-heart"></i>
+          </div>
+        </article>
+          
       </section>
-
     </main>
   </body>
 </html>
