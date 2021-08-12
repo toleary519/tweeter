@@ -27,10 +27,20 @@ $(document).ready(()=> {
   const $form = $('#new-tweet-form');
     $form.on('submit', function (event) {
       event.preventDefault();
-
+      
+      
       const $serializedData = $(this).serialize();
-      console.log("this is the serial tweet:", $serializedData);
-
+      console.log("this is the serial tweet", $serializedData);
+      console.log($serializedData.length);
+      
+      if ($serializedData.length === 5) {
+        alert("There is nothing to tweet!")
+        return;
+      }
+      if ($serializedData.length > 145) {
+        alert("Your tweet is too long!")
+        return;
+      }
       $.post('/tweets', $serializedData).then(fetchPosts); 
     
     })
