@@ -6,8 +6,6 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 
- 
-
 
 $(document).ready(()=> {
   
@@ -29,13 +27,15 @@ $(document).ready(()=> {
   const $form = $('#new-tweet-form');
     $form.on('submit', function (event) {
       event.preventDefault();
-      console.log('form submitted')
 
       const $serializedData = $(this).serialize();
       console.log($serializedData);
-    })
 
-  // $('#tweet-button').on('click', fetchPosts);
+      // $.post('/tweets', $serializedData).then(() => {})
+      $.post('/tweets', $serializedData), (response) => {
+        console.log(response);
+      }
+    })
 
   const createTweetElement = (data) => {
   
@@ -71,9 +71,6 @@ $(document).ready(()=> {
     }
     
   };
-
-  
-
 
 }) 
 
