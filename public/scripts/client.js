@@ -45,20 +45,26 @@ $(document).ready(()=> {
     
     })
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (data) => {
   
     const $tweet = $(`
       <div class="tweet" >
         <div class="avatar-name"> 
-          <img name ="avatar" src=${data.user.avatars}></img>
-          <p class="author">${data.user.name}</p>
-          <p class="handle">${data.user.handle}</p>
+          <img name ="avatar" src=${escape(data.user.avatars)}></img>
+          <p class="author">${escape(data.user.name)}</p>
+          <p class="handle">${escape(data.user.handle)}</p>
         </div>
         <div class="stored-tweet">
-          <p>${data.content.text}</input>
+          <p>${escape(data.content.text)}</input>
         </div>
         <div class="icons-date">
-          <time class="timeago">${data.created_at}</time>
+          <time class="timeago">${escape(data.created_at)}</time>
           <i class="fas fa-solid fa-flag"></i>
           <i class="fas fa-solid fa-retweet"></i>
           <i class="fas fa-solid fa-heart"></i>
