@@ -54,13 +54,13 @@
     <main class="container">
       <section class="new-tweet">
         <p>What are you humming about?</p>
-        <form action="/tweets" method="POST">
+        <form id="new-tweet-form">
           <div class="text-field">
             <!-- <label for="tweet-text">What are you humming about?</label> -->
-            <textarea class="tweet-text" name="text" id="tweet-text" rows="1" placeholder="Hello world."></textarea>
+            <textarea class="tweet-text" name="body" id="tweet-text" rows="1" placeholder="Hello world."></textarea>
          </div>
           <div class="footer">
-            <button id="tweetButton" type="submit">Tweet</button>
+            <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" id="counter" class="counter">140</output>
           </div>
         </form>

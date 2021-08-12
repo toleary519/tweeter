@@ -10,23 +10,32 @@
 
 
 $(document).ready(()=> {
-  // $('.tweet-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   
-
-
-  const fetchPosts = () => {
+  // const fetchPosts = () => {
     $.ajax({
       url: '/tweets',
       method: 'GET',
       dataType: 'json',
       success: (post) => {
+        console.log(post);
         renderTweets(post);
       }, 
       error: (err) => {
         console.log(err);
       }
     })
-  };
+  // };
+
+  const $form = $('#new-tweet-form');
+    $form.on('submit', function (event) {
+      event.preventDefault();
+      console.log('form submitted')
+
+      const $serializedData = $(this).serialize();
+      console.log($serializedData);
+    })
+
+  // $('#tweet-button').on('click', fetchPosts);
 
   const createTweetElement = (data) => {
   
@@ -53,26 +62,17 @@ $(document).ready(()=> {
  
  
   const renderTweets = function(tweets) {
-    
+    const $tweetContainer = $('.tweet-container')
+    // $tweetContainer.empty();
+
     for (tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      const $tweetContainer = $('.tweet-container')
       $tweetContainer.prepend($tweet);
     }
     
-  }
+  };
 
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 }) 
