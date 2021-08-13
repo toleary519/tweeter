@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   const $textArea = $("#tweet-text");
 
-  $textArea.on('keyup', function() {
+  $textArea.on('input', function() {
     const remainingChar = 140 - this.value.length;
     $("#counter").text(remainingChar);
 
@@ -32,5 +32,3 @@ toastr.options = {
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
 };
-
-module.exports = toastr.options;

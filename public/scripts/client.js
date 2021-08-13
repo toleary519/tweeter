@@ -8,7 +8,7 @@
 
 
 $(document).ready(()=> {
-
+  $('time.timeago').timeago();
   const fetchPosts = () => {
     $.ajax({
       url: '/tweets',
@@ -43,7 +43,8 @@ $(document).ready(()=> {
         return;
       }
       $.post('/tweets', $serializedData).then(fetchPosts); 
-      originalValue = "";
+      $('#tweet-text').val("");
+      $('#counter').val("140");
     })
 
   const escape = function (str) {
@@ -65,12 +66,13 @@ $(document).ready(()=> {
           <p>${escape(data.content.text)}</input>
         </div>
         <div class="icons-date">
-          <time class="timeago">${escape(data.created_at)}</time>
+          <time class="timeago" datetime="${new Date(data.created_at).toISOString()}"></time>
           <i class="fas fa-solid fa-flag"></i>
           <i class="fas fa-solid fa-retweet"></i>
           <i class="fas fa-solid fa-heart"></i>
         </div>
       </div>
+      <br>
       `)
     return $tweet;  
   };
@@ -79,13 +81,14 @@ $(document).ready(()=> {
   const renderTweets = function(tweets) {
     const $tweetContainer = $('.tweet-container')
     $tweetContainer.empty();
-   
+    
 
     for (tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetContainer.prepend($tweet);
     }
     
+    $('time.timeago').timeago();
   };
 
 }) 
