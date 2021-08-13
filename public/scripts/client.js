@@ -32,13 +32,13 @@ $(document).ready(()=> {
       const $serializedData = $(this).serialize();
       console.log("this is the serial tweet", $serializedData);
       console.log($serializedData.length);
-      
+     
       if ($serializedData.length === 5) {
-        alert("There is nothing to tweet!")
+        toastr.warning("There is nothing to tweet!")
         return;
       }
       if ($serializedData.length > 145) {
-        alert("Your tweet is too long!")
+        toastr.warning("Your tweet is too long!")
         return;
       }
       $.post('/tweets', $serializedData).then(fetchPosts); 
@@ -78,6 +78,7 @@ $(document).ready(()=> {
   const renderTweets = function(tweets) {
     const $tweetContainer = $('.tweet-container')
     $tweetContainer.empty();
+   
 
     for (tweet of tweets) {
       const $tweet = createTweetElement(tweet);
