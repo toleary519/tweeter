@@ -4,6 +4,7 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +44,7 @@
       </div>
     </nav>
     
-    <header>
+    <header id="left">
     <div class="backer">
       <div class="header-content">
         <img src="/images/profile-hex.png"> 
@@ -53,7 +54,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main id="right" class="container">
       <section class="new-tweet">
         <p>What are you humming about?</p>
         <form id="new-tweet-form">

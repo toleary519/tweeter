@@ -29,6 +29,20 @@ body {
   font-size: 24px;
 }
 
+@media only screen and (min-width: 1024px) {
+  #left {
+    width: 34%;
+    float: left;
+  
+  }
+  #right {
+    width: 66%;
+    float: left;
+    margin-top: 135px;
+  }
+}
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
