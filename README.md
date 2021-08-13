@@ -11,9 +11,9 @@ This project is intended to test and build upon HTML, CSS, JS, jQuery and AJAX f
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-!["Desktop Layout"](url)
-!["Tablet Layout"](url)
-!["Error Message for Empty Tweet"](url)
+!["Desktop Layout"](https://github.com/toleary519/tweeter/blob/master/docs/Desktop-Layout.png)
+!["Tablet Layout"](https://github.com/toleary519/tweeter/blob/master/docs/Tablet-Layout.png)
+!["Error Message for Empty Tweet"](https://github.com/toleary519/tweeter/blob/master/docs/Error-Message.png)
 
 
 ## Dependencies
