@@ -15,39 +15,34 @@ $(document).ready(()=> {
       method: 'GET',
       dataType: 'json',
       success: (post) => {
-        console.log("this is the post info", post);
         renderTweets(post);
-      }, 
+      },
       error: (err) => {
         console.log(err);
       }
-    })
+    });
   };
 
   const $form = $('#new-tweet-form');
-    $form.on('submit', function (event) {
-      event.preventDefault();
-      // console.log(event.currentTarget)
-      
-      const $serializedData = $(this).serialize();
-      console.log("this is the serial tweet", $serializedData);
-      let originalValue = event.currentTarget['0'].value;
-      console.log(originalValue.length);
+  $form.on('submit', function(event) {
+    event.preventDefault();
+    const $serializedData = $(this).serialize();
+    let originalValue = event.currentTarget['0'].value;
 
-      if (originalValue.length === 0) {
-        toastr.error("There is nothing to tweet!")
-        return;
-      }
-      if (originalValue.length > 140) {
-        toastr.error("Your tweet is too long!")
-        return;
-      }
-      $.post('/tweets', $serializedData).then(fetchPosts); 
-      $('#tweet-text').val("");
-      $('#counter').val("140");
-    })
+    if (originalValue.length === 0) {
+      toastr.error("There is nothing to tweet!");
+      return;
+    }
+    if (originalValue.length > 140) {
+      toastr.error("Your tweet is too long!");
+      return;
+    }
+    $.post('/tweets', $serializedData).then(fetchPosts);
+    $('#tweet-text').val("");
+    $('#counter').val("140");
+  });
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -73,13 +68,13 @@ $(document).ready(()=> {
         </div>
       </div>
       <br>
-      `)
-    return $tweet;  
+      `);
+    return $tweet;
   };
  
  
   const renderTweets = function(tweets) {
-    const $tweetContainer = $('.tweet-container')
+    const $tweetContainer = $('.tweet-container');
     $tweetContainer.empty();
     
 
@@ -91,5 +86,5 @@ $(document).ready(()=> {
     $('time.timeago').timeago();
   };
 
-}) 
+});
 
