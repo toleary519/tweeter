@@ -27,22 +27,23 @@ $(document).ready(()=> {
   const $form = $('#new-tweet-form');
     $form.on('submit', function (event) {
       event.preventDefault();
-      
+      // console.log(event.currentTarget)
       
       const $serializedData = $(this).serialize();
       console.log("this is the serial tweet", $serializedData);
-      console.log($serializedData.length);
-     
-      if ($serializedData.length === 5) {
+      let originalValue = event.currentTarget['0'].value;
+      console.log(originalValue.length);
+
+      if (originalValue.length === 0) {
         toastr.warning("There is nothing to tweet!")
         return;
       }
-      if ($serializedData.length > 145) {
+      if (originalValue.length > 140) {
         toastr.warning("Your tweet is too long!")
         return;
       }
       $.post('/tweets', $serializedData).then(fetchPosts); 
-    
+      originalValue = "";
     })
 
   const escape = function (str) {
