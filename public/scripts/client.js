@@ -8,7 +8,7 @@
 
 
 $(document).ready(()=> {
-  
+
   const fetchPosts = () => {
     $.ajax({
       url: '/tweets',
@@ -35,11 +35,11 @@ $(document).ready(()=> {
       console.log(originalValue.length);
 
       if (originalValue.length === 0) {
-        toastr.warning("There is nothing to tweet!")
+        toastr.error("There is nothing to tweet!")
         return;
       }
       if (originalValue.length > 140) {
-        toastr.warning("Your tweet is too long!")
+        toastr.error("Your tweet is too long!")
         return;
       }
       $.post('/tweets', $serializedData).then(fetchPosts); 
