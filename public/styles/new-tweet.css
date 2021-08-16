@@ -15,8 +15,8 @@ p {
 
 .tweet-text {
   display: flex;
-  width: 100%;
   align-content: flex-end;
+  width: 100%;
   border: none;
   border-bottom: 2px solid;
   background-color: #f5f574;

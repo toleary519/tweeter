@@ -1,24 +1,13 @@
 [
   {
     "user": {
-      "name": "Newton",
+      "name": "Thomas O'Leary",
       "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@toleary"
     },
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1628718951546
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1628805351546
+    "created_at": 1628999484420
   }
 ]

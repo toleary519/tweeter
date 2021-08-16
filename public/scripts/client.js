@@ -4,10 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
 
 
 $(document).ready(()=> {
+
   $('time.timeago').timeago();
   const fetchPosts = () => {
     $.ajax({
@@ -22,7 +22,9 @@ $(document).ready(()=> {
       }
     });
   };
+  fetchPosts();
 
+  // handles submition of tweet and checks for too long too short errors in text
   const $form = $('#new-tweet-form');
   $form.on('submit', function(event) {
     event.preventDefault();
@@ -48,6 +50,7 @@ $(document).ready(()=> {
     return div.innerHTML;
   };
 
+  // template to prepend to the DOM
   const createTweetElement = (data) => {
   
     const $tweet = $(`
@@ -72,7 +75,7 @@ $(document).ready(()=> {
     return $tweet;
   };
  
- 
+  // loops through new tweets and prepends template
   const renderTweets = function(tweets) {
     const $tweetContainer = $('.tweet-container');
     $tweetContainer.empty();
@@ -87,4 +90,3 @@ $(document).ready(()=> {
   };
 
 });
-

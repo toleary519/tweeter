@@ -41,6 +41,7 @@ article {
   margin-right: 13px;
   border: none;
   border-bottom: 3px solid;
+  word-break: break-word;
 }
 
 .icons-date {
